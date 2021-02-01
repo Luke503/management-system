@@ -37,19 +37,19 @@ function insertNewRecord(data) {
 }
 
 function resetForm() {
-    document.getElementById("fullName").value = "";
-    document.getElementById("empCode").value = "";
-    document.getElementById("salary").value = "";
-    document.getElementById("city").value = "";
+    document.getElementById("employeeId").value = "";
+    document.getElementById("firstName").value = "";
+    document.getElementById("lastName").value = "";
+    document.getElementById("bDate").value = "";
     selectedRow = null;
 }
 
 function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
-    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("empCode").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("salary").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("city").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("employeeId").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("firstName").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("lastName").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("bDate").value = selectedRow.cells[3].innerHTML;
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.fullName;
