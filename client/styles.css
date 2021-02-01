@@ -48,6 +48,29 @@ input[type=submit] {
     cursor: pointer;
 }
 
+.form-action-buttons {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #5d5ca7;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.form-action-buttons:hover {
+    background-color: #5254bd
+}
+
+.form-action-buttons:hover {
+    background-color: #634cb6;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 form div.form-action-buttons {
     text-align: right;
 }
