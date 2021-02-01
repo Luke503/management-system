@@ -51,13 +51,3 @@ body {
     color: #fff;
     border-bottom-color: #fff;
 }
-
-.bg-image {
-    background-image: url("skyscraper.jpg");
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
