@@ -1,59 +1,18 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
+<html lang="en">
 <head>
-    <title>
-        Crud
-    </title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+
+  <title>Title here</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <H1>Hello</H1>
+  <a href="employees.html">Data</a>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                    <h1>Employees</h1>
-                    <div>
-                        <label>Employee ID</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="fullName" id="fullName">
-                    </div>
-                    <div>
-                        <label>First name</label>
-                        <input type="text" name="firstName" id="firstName">
-                    </div>
-                    <div>
-                        <label>Last name</label>
-                        <input type="text" name="lastName" id="lastName">
-                    </div>
-                    <div>
-                        <label>Birth date</label>
-                        <input type="text" name="bDate" id="bDate">
-                    </div>
-                    <div class="form-action-buttons">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-            </td>
-            <td>
-                <table class="list" id="employeeList">
-                    <thead>
-                        <tr>
-                            <th>Employee ID</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Birth date</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <script src="script.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
-
 </html>
