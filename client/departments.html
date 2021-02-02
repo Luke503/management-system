@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Crud
+       Crud
     </title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,28 +13,26 @@
         <tr>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                    <h1>Employees</h1>
+                    <h1>Departments</h1>
                     <div>
-                        <label>Employee ID</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="deptId" id="deptId">
+                        <label>Department ID</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="departmentId" id="departmentId">
                     </div>
                     <div>
-                        <label>First name</label>
-                        <input type="text" name="deptName" id="deptName">
+                        <label>Department name</label>
+                        <input type="text" name="departmentName" id="departmentName">
                     </div>
-                    <div class="form-action-buttons">
+                    <div  class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
             </td>
             <td>
-                <table class="list" id="employeeList">
+                <table class="list" id="departmentList">
                     <thead>
                         <tr>
-                            <th>Employee ID</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Birth date</th>
+                            <th>Department ID</th>
+                            <th>Department Name</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -45,4 +43,7 @@
             </td>
         </tr>
     </table>
-    <script src="script.js"></script>
+    <script src="departments.js"></script>
+</body>
+
+</html>
