@@ -64,6 +64,15 @@ INSERT INTO positions (position_name, position_rank) VALUES
 ('Front Desk Secretary', '95'),
 ('Janitor', '100');
 
+CREATE TABLE employee_positions (
+    FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+    FOREIGN KEY (positions_id) REFERENCES positions (positions_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+)
+
 
 CREATE TABLE departments (
     department_id int(11) NOT NULL AUTO_INCREMENT,
@@ -86,10 +95,10 @@ CREATE TABLE tasks (
     assigned_to varchar(255) NOT NULL,
     PRIMARY KEY (task_id)
     FOREIGN KEY (project_id) REFERENCES projects (project_id)
-    ON UPDATE SET NULL
+    ON UPDATE CASCADE
     ON DELETE SET NULL
     FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
-    ON UPDATE SET NULL
+    ON UPDATE CASCADE
     ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
@@ -103,6 +112,6 @@ INSERT INTO tasks (assigned_task, assigned_to) VALUES
 ('scheduling meetings', IDK),
 ('investment advising', IDK),
 ('foreign currency exchange', IDK),
-('disgarding trash', IDK),
+('discarding trash', IDK),
 ('offering loans', IDK);
 
