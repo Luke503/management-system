@@ -89,30 +89,3 @@ INSERT INTO departments (department_name) VALUES
 ('private banking'),
 ('investment banking');
 
-
-CREATE TABLE tasks (
-    task_id int(11) NOT NULL AUTO_INCREMENT,
-    assigned_task varchar(255) NOT NULL,
-    assigned_to varchar(255) NOT NULL,
-    PRIMARY KEY (task_id),
-    FOREIGN KEY (task_id) REFERENCES projects (project_id)
-    ON UPDATE CASCADE
-    ON DELETE SET NULL,
-    FOREIGN KEY (task_id) REFERENCES employees (employee_id)
-    ON UPDATE CASCADE
-    ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-INSERT INTO tasks (assigned_task, assigned_to) VALUES
-('accepting deposits', IDK),
-('paying out money', IDK),
-('recording transactions', IDK),
-('printing reciepts', IDK),
-('cashing checks', IDK),
-('scheduling meetings', IDK),
-('investment advising', IDK),
-('foreign currency exchange', IDK),
-('discarding trash', IDK),
-('offering loans', IDK);
-

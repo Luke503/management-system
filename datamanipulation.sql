@@ -22,10 +22,3 @@ INSERT INTO departments (department_name, department_id) VALUES (:department_nam
 SELECT * FROM departments WHERE department_name = :department_name_input;
 DELETE FROM departments WHERE department_id = :department_id_input;
 UPDATE departments SET department_name = :department_name_input WHERE department_id = :department_id_input;
-
-INSERT INTO tasks (assigned_task, assigned_to, task_id) VALUES (:assigned_task_input, :assigned_to_input, :task_id_input);
-SELECT * FROM tasks WHERE assigned_task = :assigned_task_input AND assigned_to = :assigned_to_input;
-DELETE FROM tasks WHERE task_id = :task_id_input;
-UPDATE tasks SET assigned_task = :assigned_task_input AND assigned_to = :assigned_to_input WHERE task_id = :task_id_input;
-
-
