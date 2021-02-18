@@ -13,8 +13,8 @@ CREATE TABLE employees (
     first_name varchar(255) NOT NULL,
     last_name varchar(255) NOT NULL,
     birth_date  DATE NOT NULL,
-    FOREIGN KEY (employee_id) 
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+    PRIMARY KEY (employee_id) 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 INSERT INTO employees (first_name, last_name, birth_date) VALUES
@@ -30,7 +30,7 @@ CREATE TABLE projects (
     project_id int(11) NOT NULL AUTO_INCREMENT,
     project_name varchar(255) NOT NULL,
     PRIMARY KEY (project_id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 INSERT INTO projects (project_name) VALUES
@@ -51,7 +51,7 @@ CREATE TABLE positions (
     position_name varchar(255) NOT NULL,
     position_rank varchar(255) NOT NULL,
     PRIMARY KEY (position_id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 INSERT INTO positions (position_name, position_rank) VALUES
@@ -64,21 +64,22 @@ INSERT INTO positions (position_name, position_rank) VALUES
 ('Front Desk Secretary', '95'),
 ('Janitor', '100');
 
+
 CREATE TABLE employee_positions (
     FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
     ON UPDATE CASCADE
-    ON DELETE CASCADE
+    ON DELETE CASCADE,
     FOREIGN KEY (positions_id) REFERENCES positions (positions_id)
     ON UPDATE CASCADE
     ON DELETE CASCADE
-)
+);
 
 
 CREATE TABLE departments (
     department_id int(11) NOT NULL AUTO_INCREMENT,
     department_name varchar(255) NOT NULL,
     PRIMARY KEY (department_id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 INSERT INTO departments (department_name) VALUES
@@ -93,14 +94,14 @@ CREATE TABLE tasks (
     task_id int(11) NOT NULL AUTO_INCREMENT,
     assigned_task varchar(255) NOT NULL,
     assigned_to varchar(255) NOT NULL,
-    PRIMARY KEY (task_id)
-    FOREIGN KEY (project_id) REFERENCES projects (project_id)
+    PRIMARY KEY (task_id),
+    FOREIGN KEY (task_id) REFERENCES projects (project_id)
+    ON UPDATE CASCADE
+    ON DELETE SET NULL,
+    FOREIGN KEY (task_id) REFERENCES employees (employee_id)
     ON UPDATE CASCADE
     ON DELETE SET NULL
-    FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
-    ON UPDATE CASCADE
-    ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 INSERT INTO tasks (assigned_task, assigned_to) VALUES
