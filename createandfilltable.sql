@@ -66,6 +66,7 @@ INSERT INTO positions (position_name, position_rank) VALUES
 
 
 CREATE TABLE employee_positions (
+    employee_positions_id int(11) NOT NULL AUTO_INCREMENT,
     FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
