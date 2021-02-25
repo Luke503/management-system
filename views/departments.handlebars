@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+       Crud
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <h1>Departments</h1>
+                    <div>
+                        <label>Department ID</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="departmentId" id="departmentId">
+                    </div>
+                    <div>
+                        <label>Department name</label>
+                        <input type="text" name="departmentName" id="departmentName">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="departmentList">
+                    <thead>
+                        <tr>
+                            <th>Department ID</th>
+                            <th>Department Name</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="departments.js"></script>
+</body>
+
+</html>
