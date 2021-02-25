@@ -12,19 +12,19 @@ router.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-router.get('/about',function(req,res){
+router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/departments.html'));
 });
 
-router.get('/sitemap',function(req,res){
+router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/employees.html'));
 });
 
-router.get('/about',function(req,res){
+router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/positions.html'));
 });
 
-router.get('/about',function(req,res){
+router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/projects.html'));
 });
 
